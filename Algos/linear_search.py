@@ -1,5 +1,5 @@
-# Linear saerch
-def search(arr, n , x):
+# Linear search
+def search(arr, n, x):
     for i in range(n):
         if arr[i] == x:
             return i
