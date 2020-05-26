@@ -23,3 +23,7 @@ def problem_5(n):
                     run = False
         num += 20
     return least
+
+
+v = problem_5(20)
+print(v)
