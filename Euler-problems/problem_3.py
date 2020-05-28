@@ -22,3 +22,7 @@ def problem_3(num):
     if num > 2:
         max_prime = num
     return int(max_prime)
+
+
+k = problem_3(27)
+print(k)
