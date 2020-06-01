@@ -25,8 +25,21 @@ In the 20×20 grid below, four numbers along a diagonal line have been marked in
 The product of these numbers is 26 × 63 × 78 × 14 = 1788696.
 
 What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20×20 grid?
+
 """
 
+import os
 
-def problem_11():
-    pass
+pr_file = 'C:/Users/u325539/Desktop/ML/proj/Algos-Euler/Euler-problems/pr_11.txt'
+
+def problem_11(arr):
+    sum = 0
+    f = open(arr, "r")
+    for dig in f:
+        dig = dig.strip()
+        sum += int(dig)
+
+    print(sum)
+
+
+

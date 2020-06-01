@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a16cd2ea-21a7-4dfc-adc9-edab063b0525" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Euler-problems/problem_9.py" beforeDir="false" afterPath="$PROJECT_DIR$/Euler-problems/problem_9.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Euler-problems/problem_11.py" beforeDir="false" afterPath="$PROJECT_DIR$/Euler-problems/problem_11.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,8 +52,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Euler-problems/problem_11.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="59" lean-forward="true" selection-start-line="13" selection-start-column="59" selection-end-line="13" selection-end-column="59" />
+            <state relative-caret-position="374">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Euler-problems/pr_11.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1513">
+              <caret line="89" column="38" selection-start-line="89" selection-start-column="38" selection-end-line="89" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -79,6 +89,7 @@
         <option value="$PROJECT_DIR$/Euler-problems/problem_3.py" />
         <option value="$PROJECT_DIR$/Euler-problems/problem_10.py" />
         <option value="$PROJECT_DIR$/Euler-problems/problem_9.py" />
+        <option value="$PROJECT_DIR$/Euler-problems/pr_11.txt" />
         <option value="$PROJECT_DIR$/Euler-problems/problem_11.py" />
       </list>
     </option>
@@ -135,7 +146,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.problem_9">
+  <component name="RunManager" selected="Python.problem_11">
     <configuration name="problem_10" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Algos-Euler" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -149,6 +160,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Euler-problems/problem_10.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="problem_11" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Algos-Euler" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Euler-problems" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\u325539\Desktop\ML\proj\Algos-Euler\Euler-problems\problem_13.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -199,27 +231,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="problem_8" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Algos-Euler" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Euler-problems" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Euler-problems/problem_8.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="problem_9" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Algos-Euler" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -243,11 +254,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.problem_11" />
         <item itemvalue="Python.problem_9" />
         <item itemvalue="Python.problem_10" />
         <item itemvalue="Python.problem_7" />
         <item itemvalue="Python.problem_3" />
-        <item itemvalue="Python.problem_8" />
       </list>
     </recent_temporary>
   </component>
@@ -267,14 +278,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="3832" y="-6" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.4301192" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.4301192" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -382,6 +392,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Euler-problems/pr_11.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1513">
+          <caret line="89" column="38" selection-start-line="89" selection-start-column="38" selection-end-line="89" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Euler-problems/problem_10.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
@@ -391,8 +408,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Euler-problems/problem_11.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="59" lean-forward="true" selection-start-line="13" selection-start-column="59" selection-end-line="13" selection-end-column="59" />
+        <state relative-caret-position="374">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
         </state>
       </provider>
     </entry>
