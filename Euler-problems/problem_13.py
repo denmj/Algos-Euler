@@ -30,9 +30,9 @@ What is the greatest product of four adjacent numbers in the same direction (up,
 
 import os
 
-pr_file = 'C:/Users/u325539/Desktop/ML/proj/Algos-Euler/Euler-problems/pr_11.txt'
+pr_file = 'C:/Users/u325539/Desktop/ML/proj/Algos-Euler/Euler-problems/pr_13.txt'
 
-def problem_11(arr):
+def problem_13(arr):
     sum = 0
     f = open(arr, "r")
     for dig in f:
@@ -43,3 +43,4 @@ def problem_11(arr):
 
 
 
+problem_13(pr_file)
