@@ -13,7 +13,11 @@ Return the leftmost pivot index. If no such index exists, return -1.
 
 from typing import List
 
+
 class Solution:
     @staticmethod
     def pivotIndex(nums: List[int]) -> int:
-        pass
+        for i in range(len(nums)):
+            if sum(nums[:i]) == sum(nums[i + 1:]):
+                return i
+        return -1
