@@ -63,3 +63,5 @@ lNode2 = ListNode(val=5, next=ListNode(val=6, next=ListNode(val=4, next=0)))
 
 s = Solution()
 resultNode = s.addTwoNumbers(lNode, lNode2)
+
+print(resultNode.val)
