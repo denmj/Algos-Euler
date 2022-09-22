@@ -30,18 +30,36 @@ class ListNode:
         self.next = next
 
 
+class Solution:
+    @staticmethod
+    def addTwoNumbers(l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+
+        carry = 0
+        result = ListNode(0)
+        current_node = result
+
+        while l1 or l2 or carry != 0:
+            val1 = l1.val if l1 else 0
+            val2 = l2.val if l2 else 0
+            print(val1, "+", val2, '=', val1 + val2 + carry, '*******', 'carry: ', (val1 + val2 + carry) // 10,
+                  'remainder: ', (val1 + val2 + carry) % 10)
+            sum_ = (val1 + val2 + carry)
+            print(sum_)
+            carry = sum_ // 10
+            print(carry)
+            remainder = sum_ % 10
+            print(remainder)
+            Node = ListNode(remainder)
+            current_node.next = Node
+            current_node = Node
+            l1 = l1.next if l1 else None
+            l2 = l2.next if l2 else None
+
+        return result.next
+
+
 lNode = ListNode(val=2, next=ListNode(val=4, next=ListNode(val=3, next=0)))
 lNode2 = ListNode(val=5, next=ListNode(val=6, next=ListNode(val=4, next=0)))
 
-print(lNode.val, lNode.next.val, lNode.next.next.val)
-
-
-class Solution:
-    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
-        while l1 != None:
-            print(l1.val)
-
-        return l1
-
 s = Solution()
-ll = s.addTwoNumbers(lNode, lNode2)
+resultNode = s.addTwoNumbers(lNode, lNode2)
