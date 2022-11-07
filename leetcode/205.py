@@ -21,6 +21,11 @@ class Solution:
         s_id = ' '.join(index_id_s)
         t_id = ' '.join(index_id_t)
 
+        print(index_of_s)
+        print(index_id_t)
+
+        print(s_id)
+        print(t_id)
         return s_id == t_id
 
 
