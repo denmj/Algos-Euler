@@ -23,7 +23,11 @@ class Solution:
 
 
 # Test case for longestNiceSubstring
-s = "YazaAay"
+s = "dLDlDDDDmDDDDD"
 
-print(Solution().longestNiceSubstring(s))
+for i in range(len(s)):
+    print(i, s[:i], s[i+1:])
+
+
+# print(Solution().longestNiceSubstring(s))
 
