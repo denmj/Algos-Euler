@@ -20,10 +20,8 @@ def is_palindrome(s: str) -> bool:
             right -= 1
     return True
 
-# (M)
-
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-target = 7
+# numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# target = 7
 
 def TwoSums(nums: List, target: int) -> List:
 
@@ -38,19 +36,16 @@ def TwoSums(nums: List, target: int) -> List:
         else:
             right -= 1
     return [-1, -1]
-    
 
+def moveZeros(nums: List[int]) -> List[int]:
+    left, right = 0, 0
 
-print(TwoSums(numbers, target))
+    while right < len(nums):
+        if nums[right] != 0:
+            nums[left], nums[right] = nums[right], nums[left]
+            left += 1
 
-
-
-# p1, p2 = 0, len(numbers)-1
-
-# while p1 < p2:
-#     sum = numbers[p1] + numbers[p2]
-#     print("Index of : ", p1, "for: ", numbers[p1])
-#     print("Index of : ", p2, "for: ", numbers[p2])
-#     print("Sum of: ", numbers[p1], "and", numbers[p2], "is: ", sum)
-#     p1 += 1 
-#     p2 -= 1
+        right += 1
+    return nums
+ 
+#  l = [0, 1, 0, 3, 12]
