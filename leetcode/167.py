@@ -1,25 +1,16 @@
 from typing import List
 
 class Solution:
-    def twoSum(self, numbers: List[int], target: int) -> List[int]:
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-        # i = 0
-        # j = len(numbers) - 1
-        # while i < j:
-        #     if numbers[i] + numbers[j] == target:
-        #         return [i + 1, j + 1]
-        #     elif numbers[i] + numbers[j] < target:
-        #         i += 1
-        #     else:
-        #         j -= 1
-        # return []
-        pass
+    def TwoSums(nums: List, target: int) -> List:
+
+        left, right = 0, len(nums) - 1
+
+        while left < right:
+            sum = nums[left] + nums[right]
+            if sum == target:
+                return [left+1, right+1]
+            elif sum < target:
+                left += 1
+            else:
+                right -= 1
+        return [-1, -1]

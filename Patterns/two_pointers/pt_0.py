@@ -22,13 +22,11 @@ def is_palindrome(s: str) -> bool:
 
 # (M)
 
-numbers = [11, 23, 2, 5, 7, 11, 15]
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 target = 7
 
 def TwoSums(nums: List, target: int) -> List:
 
-
-    nums = sorted(nums)
     left, right = 0, len(nums) - 1
 
     while left < right:
@@ -39,19 +37,20 @@ def TwoSums(nums: List, target: int) -> List:
             left += 1
         else:
             right -= 1
-    return []
+    return [-1, -1]
     
 
 
+print(TwoSums(numbers, target))
 
 
 
+# p1, p2 = 0, len(numbers)-1
 
-p1, p2 = 0, len(numbers)-1
-
-while p1 < p2:
-    print("Index of : ", p1, "for: ", numbers[p1])
-    print("Index of : ", p2, "for: ", numbers[p2])
-    print("Sum of: ", numbers[p1], "and", numbers[p2], "is: ", numbers[p1] + numbers[p2])
-    p1 += 1 
-    p2 -= 1
+# while p1 < p2:
+#     sum = numbers[p1] + numbers[p2]
+#     print("Index of : ", p1, "for: ", numbers[p1])
+#     print("Index of : ", p2, "for: ", numbers[p2])
+#     print("Sum of: ", numbers[p1], "and", numbers[p2], "is: ", sum)
+#     p1 += 1 
+#     p2 -= 1
