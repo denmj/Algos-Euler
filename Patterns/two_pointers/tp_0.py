@@ -61,7 +61,7 @@ def removeDuplicates(nums: List[int]) -> int:
         right += 1
     return left + 1
 
-test_arr = [0, 0, 0, 0, 1, 1, 1, 2, 2, 3, 3, 4, 4]
+# test_arr = [0, 0, 0, 0, 1, 1, 1, 2, 2, 3, 3, 4, 4]
 
 # (M)
 def removeDups(nums: List[int]) -> int:
@@ -80,4 +80,29 @@ def removeDups(nums: List[int]) -> int:
 
     return left + 1
 
-print(removeDups(test_arr))
+
+sorted_sq = [-4, -1, 0, 3, 10]
+
+def sortedSquared(nums: List[int]) -> List[int]:
+    # left, right = 0, len(nums) - 1
+    mid, n = 0, len(nums)
+    for i in range(n):
+        if nums[i] >= 0:
+            mid = i
+            break
+    left, right = mid - 1, mid
+    result = []
+    while left >= 0 and right < n:
+        if nums[left] ** 2 < nums[right] ** 2:
+            result.append(nums[left] ** 2)
+            left -= 1
+        else:
+            result.append(nums[right] ** 2)
+            right += 1
+    while left >= 0:
+        result.append(nums[left] ** 2)
+        left -= 1
+    while right < n:
+        result.append(nums[right] ** 2)
+        right += 1
+    return result
