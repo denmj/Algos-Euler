@@ -18,3 +18,4 @@ class Solution2:
                 right -= 1
         return result
 
+        
