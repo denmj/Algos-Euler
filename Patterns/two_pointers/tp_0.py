@@ -81,7 +81,7 @@ def removeDups(nums: List[int]) -> int:
     return left + 1
 
 
-sorted_sq = [-4, -1, 0, 3, 10]
+sorted_sq = [-11, -10, -7, -5, -2]
 
 def sortedSquared(nums: List[int]) -> List[int]:
     # left, right = 0, len(nums) - 1
@@ -90,19 +90,21 @@ def sortedSquared(nums: List[int]) -> List[int]:
         if nums[i] >= 0:
             mid = i
             break
-    left, right = mid - 1, mid
-    result = []
-    while left >= 0 and right < n:
-        if nums[left] ** 2 < nums[right] ** 2:
-            result.append(nums[left] ** 2)
-            left -= 1
-        else:
-            result.append(nums[right] ** 2)
-            right += 1
-    while left >= 0:
-        result.append(nums[left] ** 2)
-        left -= 1
-    while right < n:
-        result.append(nums[right] ** 2)
-        right += 1
-    return result
+
+    print(mid)
+    # left, right = mid - 1, mid
+    # result = []
+    # while left >= 0 and right < n:
+    #     if nums[left] ** 2 < nums[right] ** 2:
+    #         result.append(nums[left] ** 2)
+    #         left -= 1
+    #     else:
+    #         result.append(nums[right] ** 2)
+    #         right += 1
+    # while left >= 0:
+    #     result.append(nums[left] ** 2)
+    #     left -= 1
+    # while right < n:
+    #     result.append(nums[right] ** 2)
+    #     right += 1
+    # return result
