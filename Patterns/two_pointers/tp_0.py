@@ -108,3 +108,41 @@ def sortedSquared(nums: List[int]) -> List[int]:
     #     result.append(nums[right] ** 2)
     #     right += 1
     # return result
+
+
+def maxArea(height: List[int]) -> int:
+    
+    
+    pass
+    
+    # left, right = 0, len(height) - 1
+    # max_area = 0
+    # while left < right:
+    #     max_area = max(max_area, min(height[left], height[right]) * (right - left))
+    #     if height[left] < height[right]:
+    #         left += 1
+    #     else:
+    #         right -= 1
+    # return max_area
+
+N = [1, 8, 6, 2, 5, 4, 8, 3, 7]
+left, right = 0, len(N) - 1
+max_area = 0
+
+while left < right:
+    print(left, right)
+    left += 1
+    right -= 1
+
+print(min(5, 4*2))
+
+def maxArea(height: List[int]) -> int:
+    left, right = 0, len(height) - 1
+    max_area = 0
+    while left < right:
+        max_area = max(max_area, min(height[left], height[right]) * (right - left))
+        if height[left] < height[right]:
+            left += 1
+        else:
+            right -= 1
+    return max_area
