@@ -81,7 +81,7 @@ def removeDups(nums: List[int]) -> int:
     return left + 1
 
 
-sorted_sq = [-11, -10, -7, -5, -2]
+# sorted_sq = [-11, -10, -7, -5, -2]
 
 def sortedSquared(nums: List[int]) -> List[int]:
     # left, right = 0, len(nums) - 1
@@ -111,32 +111,6 @@ def sortedSquared(nums: List[int]) -> List[int]:
 
 
 def maxArea(height: List[int]) -> int:
-    
-    
-    pass
-    
-    # left, right = 0, len(height) - 1
-    # max_area = 0
-    # while left < right:
-    #     max_area = max(max_area, min(height[left], height[right]) * (right - left))
-    #     if height[left] < height[right]:
-    #         left += 1
-    #     else:
-    #         right -= 1
-    # return max_area
-
-N = [1, 8, 6, 2, 5, 4, 8, 3, 7]
-left, right = 0, len(N) - 1
-max_area = 0
-
-while left < right:
-    print(left, right)
-    left += 1
-    right -= 1
-
-print(min(5, 4*2))
-
-def maxArea(height: List[int]) -> int:
     left, right = 0, len(height) - 1
     max_area = 0
     while left < right:
@@ -146,3 +120,59 @@ def maxArea(height: List[int]) -> int:
         else:
             right -= 1
     return max_area
+
+
+def ThreeSum(nums: List[int]) -> List[List[int]]:
+    
+    if len(nums) < 3:
+        return []
+    
+    # sort the array
+    nums.sort()
+    triplets = []
+    for i in range(len(nums)):
+        print(i, nums[i])
+        if i>0 and nums[i] == nums[i-1]:
+            continue
+        # then same as TwoSum (two pointers) or TwoSum (hashmap)
+        left, right = i + 1, len(nums) - 1
+
+        while left < right:
+            triplet_sum = nums[i] + nums[left] + nums[right]
+
+            if triplet_sum > 0:
+                right -= 1
+            elif triplet_sum < 0:
+                left += 1
+            else:
+                triplets.append([nums[i], nums[left], nums[right]])
+                left += 1
+                while nums[left] == nums[left - 1] and left < right:
+                    left += 1
+        return triplets
+
+    # result = []
+    # for i in range(len(nums)):
+    #     if i > 0 and nums[i] == nums[i - 1]:
+    #         continue
+    #     left, right = i + 1, len(nums) - 1
+    #     while left < right:
+    #         total = nums[i] + nums[left] + nums[right]
+    #         if total < 0:
+    #             left += 1
+    #         elif total > 0:
+    #             right -= 1
+    #         else:
+    #             result.append([nums[i], nums[left], nums[right]])
+    #             while left < right and nums[left] == nums[left + 1]:
+    #                 left += 1
+    #             while left < right and nums[right] == nums[right - 1]:
+    #                 right -= 1
+    #             left += 1
+    #             right -= 1
+    # return result
+
+
+test_list = [-3, 3, 4, -3, 1, 2]
+
+ThreeSum(test_list)
