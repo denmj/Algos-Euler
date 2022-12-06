@@ -124,55 +124,41 @@ def maxArea(height: List[int]) -> int:
 
 def ThreeSum(nums: List[int]) -> List[List[int]]:
     
-    if len(nums) < 3:
-        return []
-    
-    # sort the array
-    nums.sort()
-    triplets = []
+    result = []
     for i in range(len(nums)):
-        print(i, nums[i])
-        if i>0 and nums[i] == nums[i-1]:
+        if i > 0 and nums[i] == nums[i - 1]:
             continue
-        # then same as TwoSum (two pointers) or TwoSum (hashmap)
         left, right = i + 1, len(nums) - 1
-
         while left < right:
-            triplet_sum = nums[i] + nums[left] + nums[right]
-
-            if triplet_sum > 0:
+            total = nums[i] + nums[left] + nums[right]
+            if total < 0:
+                left += 1
+            elif total > 0:
                 right -= 1
-            elif triplet_sum < 0:
-                left += 1
             else:
-                triplets.append([nums[i], nums[left], nums[right]])
-                left += 1
-                while nums[left] == nums[left - 1] and left < right:
+                result.append([nums[i], nums[left], nums[right]])
+                while left < right and nums[left] == nums[left + 1]:
                     left += 1
-        return triplets
-
-    # result = []
-    # for i in range(len(nums)):
-    #     if i > 0 and nums[i] == nums[i - 1]:
-    #         continue
-    #     left, right = i + 1, len(nums) - 1
-    #     while left < right:
-    #         total = nums[i] + nums[left] + nums[right]
-    #         if total < 0:
-    #             left += 1
-    #         elif total > 0:
-    #             right -= 1
-    #         else:
-    #             result.append([nums[i], nums[left], nums[right]])
-    #             while left < right and nums[left] == nums[left + 1]:
-    #                 left += 1
-    #             while left < right and nums[right] == nums[right - 1]:
-    #                 right -= 1
-    #             left += 1
-    #             right -= 1
-    # return result
+                while left < right and nums[right] == nums[right - 1]:
+                    right -= 1
+                left += 1
+                right -= 1
+    return result
 
 
-test_list = [-3, 3, 4, -3, 1, 2]
+# test_list = [-3, 3, 4, -3, 1, 2]
 
-ThreeSum(test_list)
+# ThreeSum(test_list)
+
+
+#HashMap
+def partitionLabels(S: str) -> List[int]:
+    last = {c: i for i, c in enumerate(S)}
+    j = anchor = 0
+    ans = []
+    for i, c in enumerate(S):
+        j = max(j, last[c])
+        if i == j:
+            ans.append(i - anchor + 1)
+            anchor = i + 1
+    return ans
