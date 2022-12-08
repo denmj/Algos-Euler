@@ -21,6 +21,7 @@ class Solution:
 
     def sortArrayByParityTwoPointer(self, A: List[int]) -> List[int]:
 
+        # Two pointer odd and even
         left, right = 0, 0
 
         while right < len(A):
@@ -30,17 +31,8 @@ class Solution:
 
             right += 1
 
-        # return A
+        return A
 
 T = [3,1,2,4]
-odd = []
-even = []
-
-for i in T:
-    if i % 2 == 0:
-        even.append(i)
-    else:
-        odd.append(i)
-
-combined = even + odd
-print(combined)
+s= Solution()
+s.sortArrayByParityTwoPointer(A=T)
