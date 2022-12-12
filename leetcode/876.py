@@ -31,3 +31,11 @@ class Solution:
 
         return result.next
 
+class SolutionTwoPointer:
+    @staticmethod
+    def middleNode(L: ListNode) -> ListNode:
+        slow = fast = L
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        return slow
