@@ -75,4 +75,10 @@ class MyLinkedList:
             if index == self.size - 1:
                 self.tail = cur
         self.size -= 1
+
+    def deleteNode(self, node: ListNode) -> None:
+        """
+        Delete the node in the linked list, if the node is valid.
+        """
+        node.val = node.next.val
         
