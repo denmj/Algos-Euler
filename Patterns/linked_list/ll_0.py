@@ -75,19 +75,6 @@ def reverseList(self, head: ListNode) -> ListNode:
     pass
 
 
-my_list = LinkedList()
-my_list.append(1)
-my_list.append(2)
-my_list.append(3)
-my_list.append(4)
-
-my_list.print_list()
-
-my_list.erase(1)
-
-my_list.print_list()
-
-
 class MyLinkedList:
     def __init__(self):
         """
@@ -167,3 +154,52 @@ class MyLinkedList:
                 self.tail = cur
         self.size -= 1
 
+
+n1 = ListNode(10)
+n2 = ListNode(20)
+n_2_2 = ListNode(25)
+n3 = ListNode(30)
+
+n1.next = n_2_2
+n_2_2.next = n2
+n2.next = n3
+n3.next = None
+
+
+def traverse(head):
+    cur = head
+    while cur != None:
+        print(cur.val)
+        cur = cur.next
+
+
+def insert(head, data, pos):
+
+    new_node = ListNode(data)
+
+    if pos == 0:
+        new_node.next = head
+        return new_node
+    else:
+        prev = head
+        for i in range(pos -1 ):
+            prev = prev.next
+
+        new_node.next = prev.next
+        prev.next = new_node
+
+        return head
+
+
+def delete(head, pos):
+
+    if pos == 0:
+        head = head.next
+        return head
+    else:
+        prev = head
+        for i in range(pos - 1):
+            prev = prev.next
+
+        prev.next = prev.next.next
+        return head
