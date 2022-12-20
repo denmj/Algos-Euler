@@ -12,12 +12,12 @@ class Solution:
         # find the middle node
         slow = head
         fast = head
-        while fast.next and fast.next.next:
+        while fast and fast.next:
             slow = slow.next
             fast = fast.next.next
         # reverse the second half
         prev = None
-        curr = slow.next
+        curr = slow
         while curr:
             temp = curr.next
             curr.next = prev
