@@ -39,3 +39,11 @@ class SolutionTwoPointer:
             slow = slow.next
             fast = fast.next.next
         return slow
+
+h = ListNode(1)
+h.next = ListNode(2)
+h.next.next = ListNode(3)
+h.next.next.next = ListNode(4)
+h.next.next.next.next = ListNode(5)
+
+print(SolutionTwoPointer().middleNode(h).val)
